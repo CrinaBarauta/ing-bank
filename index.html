@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Esti client ING si nu ai inca ING Home'Bank? Creeaza-ti cont!</title>
+    <link rel="shortcut icon" href="favicons.png">
+    <meta name="description"
+        content="Cu ING Home'Bank stii exact ce se intampla in conturile tale! Platesti usor si rapid facturile de pe calculator sau de pe telefon si ai acces la extrase si rapoarte.">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="wrap__content">
+        <!-- Sticky bar -->
+        <section class="container__menu">
+            <div class="navbar">
+                <span>
+                    <a href="#"><i class="fas fa-arrow-left close__x"></i></a>
+                     <a href="#"><i class="fas fa-times back"></i></a>
+                    </span>
+            </div>
+        </section>
+        
+        <!-- Title and main image -->
+        <section class="section-1 align--center container">
+            <h2 class="section-1__title">Deschizi ING Card Complet, fara niciun drum la banca!</h2>
+            <div>
+                <img src="https://ing.ro/dam/ingro/homebank/e2e/start_flow.png" alt="" class="section-1__image">
+
+            </div>
+        </section>
+
+        <!-- Content list -->
+        <section class="section-2 container">
+            <div>
+                <ul class="general-list">
+                    <li class="general-list__item icon-clipboard container__text">
+                        <strong>E simplu:</strong> completezi cateva date, faci o poza buletinului, un selfie si
+                        finalizezi cererea pentru ING Card Complet acceptand termenii si conditiile contractuale.
+                    </li>
+                    <li class="general-list__item icon-card container__text">
+                        Iti incarci noul cont cu minim 1 leu cu un <strong>card de debit</strong> emis de o alta banca
+                        din Romania.
+                    </li>
+                    <li class="general-list__item icon-clock container__text">
+                        O sa ai ING Card Complet activ, pachetul cu cont in lei, card Visa si ING Home’Bank, dupa ce iti
+                        aprobam cererea.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Privacy Policy and next step button -->
+        <section class="section-3 align--center container">
+            <p class="container__text">
+                Continuand declar ca am citit si inteles <a href="#" target="_blank" class="general__link">informarea
+                    privind prelucrarea datelor personale</a>
+            </p>
+            <button id="myBtn" class="button-next">Continua</button>
+        </section>
+
+        <!-- The Modal - Popup window -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close"><i class="fas fa-arrow-left close__x"></i> <i class="fas fa-times back"></i></span>
+                <form class="mForm" id="myForm" name="myForm"
+                novalidate>
+                    <div id="main__error">
+                        <div class="error__flex">
+                            <div>
+                                <img src="icon_alert.png" class="error__img">
+                            </div>
+                            <p class="error__text">Exista erori de completare. Va rugam verificati campurile marcate!</p>
+                        </div>
+                    </div>
+                    <h2 class="mForm__title">Hai sa facem cunostinta</h2>
+                    <label for="firstName" class="mForm__row">
+                        <p class="mForm__label">Prenume</p>
+                        <input type="text" name="firstName" placeholder="Asa cum apare in buletin" id="firstName" required minlength="3"/>
+                        <span class="error" ></span>
+                    </label>
+
+                    <label for="lastName" class="mForm__row">
+                        <p class="mForm__label">Nume</p>
+                        <input type="text" name="lastName" placeholder="Asa cum apare in buletin" required minlength="3" id="lastName" />
+                        <span class="error" ></span>
+                    </label>
+
+                    <label for="country" class="mForm__row">
+                        <p class="mForm__label">Locul nasterii (tara)</p>
+                            <select class="country" id="country" required>
+                                <option disabled selected value="">Cauta tara</option>
+                                <option value="Romania">Romania</option>
+                                <option value="Olanda">Olanda</option>
+                                <option value="Spania">Spania</option>
+                                <option value="Franta">Franta</option>
+                                <option value="Germania">Germania</option>
+                                <option value="Belgia">Belgia</option>
+                                <option value="Elvetia">Elvetia</option>
+                            </select>
+                        <span class="error"></p></span>
+                    </label>
+
+                    <input type="hidden" name="ty" value="#" />
+                    <button class="submit button-next" type="submit" value="submit" id="myBtn">Continua</button>
+                </form>
+                <div id="ty" class="success">
+                    <h2 class="success__text">Cererea ta a fost inregistrata. <br>Vei fi contactat in cel mai scurt timp de&nbsp;un consultant&nbsp;ING</h2>
+                    <img src="ty__message.png" class="ty__image image__ty--1">
+                </div>
+            </div>
+        </div>
+    </div> 
+
+</body>
+</html>
