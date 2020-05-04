@@ -117,8 +117,6 @@ $(document).ready(function () {
         if (lastName.validity.valid && firstName.validity.valid && country.validity.valid) {
                 form.style.display = "none";
                 ty.style.display = "block";
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
                 event.preventDefault();
             }
         });
